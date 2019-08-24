@@ -5,8 +5,8 @@ namespace SwordAndBored
     public class Level
     {
         public string Name { get; set; }
-        private int monsterSeed;
-        private List<Monster> monsters;
+        private int MonsterSeed;
+        private List<Monster> Monsters;
 
         public Level(int difficulty)
         {
@@ -37,11 +37,11 @@ namespace SwordAndBored
         public void SpawnMonsters(int difficulty)
         {
 
-            monsterSeed = RandomNumber(0, 3) + difficulty;
-            
-            for (int i = 0; i < monsterSeed; i++)
+            MonsterSeed = RandomNumber(0, 3) + difficulty;
+
+            for (int i = 0; i < MonsterSeed; i++)
             {
-                monsters[i] = new Monster(difficulty);
+                Monsters[i] = new Monster(difficulty);
                 Console.WriteLine($"A new monster has spawned in {this.Name}");
 
             }
