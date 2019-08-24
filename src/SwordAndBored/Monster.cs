@@ -6,7 +6,7 @@ namespace SwordAndBored
 
         public Monster(int difficulty)
         {
-            this.Name = "randomName";
+            this.Name = "Luciferoth";
             this.Level = difficulty;
         }
         public override void Death()
