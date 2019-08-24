@@ -1,25 +1,33 @@
 ﻿using System;
 namespace SwordAndBored
 {
-    public class Hero
+    public class Hero : Character
     {
-  
-        public string Name { get; set; }
-        public int Attack { get; set; } = 1;
-        public int Defense { get; set; } = 0;
-        public int Level { get; set; } = 1;
+
 
         public Hero(string name)
         {
-            this.Name = name;
+            Name = name;
         }
 
-        public void PlayerStats()
+        public override void Stats()
         {
             Console.WriteLine($"Player Name: {Name}");
             Console.WriteLine($"Current Level: {Level}");
             Console.WriteLine($"Attack: {Attack}");
             Console.WriteLine($"Defense: {Defense}");
+        }
+        public override void Death()
+        {
+            if (this.Health == 0)
+            {
+                Console.WriteLine($"You Have Died");
+            }
+        }
+
+        public void EquipWeapon()
+        {
+            Attack += 5;
         }
     }
 }
